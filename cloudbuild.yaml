@@ -1,10 +1,10 @@
 steps:
 #printing the present working directory
-  - name: 'gcr.io/cloud-building/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - 'pwd'
+ steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
+timeout: '1600s'
 
       
 options:
