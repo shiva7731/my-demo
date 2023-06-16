@@ -1,0 +1,12 @@
+steps:
+#printing the present working directory
+  - name: 'gcr.io/cloud-building/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'pwd'
+
+      
+options:
+    substitution_option: 'ALLOW_LOOSE'
+    logging: CLOUD_LOGGING_ONLY 
